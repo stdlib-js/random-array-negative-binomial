@@ -35,43 +35,32 @@ limitations under the License.
 
 > Create an array containing pseudorandom numbers drawn from a [negative binomial][@stdlib/random/base/negative-binomial] distribution.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/random-array-negative-binomial
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-negativeBinomial = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-negative-binomial@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/random-array-negative-binomial/tags). For example,
-
-```javascript
-negativeBinomial = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-negative-binomial@v0.1.0-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var negativeBinomial = require( 'path/to/vendor/umd/random-array-negative-binomial/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-negative-binomial@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.negativeBinomial;
-})();
-</script>
+var negativeBinomial = require( '@stdlib/random-array-negative-binomial' );
 ```
 
 #### negativeBinomial( len, r, p\[, options] )
@@ -359,14 +348,9 @@ var sz = random.byteLength;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-negative-binomial@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var logEach = require( '@stdlib/console-log-each' );
+var negativeBinomial = require( '@stdlib/random-array-negative-binomial' );
 
 // Create a function for generating random arrays originating from the same state:
 var random = negativeBinomial.factory( 10, 0.5, {
@@ -393,11 +377,6 @@ var x4 = random( 15 );
 
 // Print the contents:
 logEach( '%f', x4 );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -458,8 +437,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/random-array-negative-binomial.svg
 [npm-url]: https://npmjs.org/package/@stdlib/random-array-negative-binomial
 
-[test-image]: https://github.com/stdlib-js/random-array-negative-binomial/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/random-array-negative-binomial/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/random-array-negative-binomial/actions/workflows/test.yml/badge.svg?branch=v0.2.0
+[test-url]: https://github.com/stdlib-js/random-array-negative-binomial/actions/workflows/test.yml?query=branch:v0.2.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/random-array-negative-binomial/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/random-array-negative-binomial?branch=main
@@ -482,23 +461,26 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 [deno-url]: https://github.com/stdlib-js/random-array-negative-binomial/tree/deno
+[deno-readme]: https://github.com/stdlib-js/random-array-negative-binomial/blob/deno/README.md
 [umd-url]: https://github.com/stdlib-js/random-array-negative-binomial/tree/umd
+[umd-readme]: https://github.com/stdlib-js/random-array-negative-binomial/blob/umd/README.md
 [esm-url]: https://github.com/stdlib-js/random-array-negative-binomial/tree/esm
+[esm-readme]: https://github.com/stdlib-js/random-array-negative-binomial/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/random-array-negative-binomial/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/random-array-negative-binomial/main/LICENSE
 
-[@stdlib/random/base/negative-binomial]: https://github.com/stdlib-js/random-base-negative-binomial/tree/umd
+[@stdlib/random/base/negative-binomial]: https://github.com/stdlib-js/random-base-negative-binomial
 
-[@stdlib/array/typed-real-dtypes]: https://github.com/stdlib-js/array-typed-real-dtypes/tree/umd
+[@stdlib/array/typed-real-dtypes]: https://github.com/stdlib-js/array-typed-real-dtypes
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/umd
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/umd
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
 <!-- <related-links> -->
 
-[@stdlib/random/array/binomial]: https://github.com/stdlib-js/random-array-binomial/tree/umd
+[@stdlib/random/array/binomial]: https://github.com/stdlib-js/random-array-binomial
 
 <!-- </related-links> -->
 
