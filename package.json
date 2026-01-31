@@ -37,8 +37,8 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/array-defaults": "^0.3.0",
-    "@stdlib/array-dtypes": "^0.3.0",
+    "@stdlib/array-defaults": "^0.4.0",
+    "@stdlib/array-dtypes": "^0.4.0",
     "@stdlib/random-array-tools-binary-factory": "^0.2.2",
     "@stdlib/random-base-negative-binomial": "^0.2.1",
     "@stdlib/types": "^0.4.3",
